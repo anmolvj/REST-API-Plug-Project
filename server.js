@@ -11,23 +11,24 @@ app.disable('x-powered-by');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-
+//-----Home page for Website---------
 app.get('/',function(req,res,next){
-	res.send("Works so far");
+	res.send("Welcome to Project Plug");
 });
 
 
+//-----Main code handling therequests------
 app.get('/:number',function(req,res,next){
 
-	var command = req.params.number;
+	var command = req.params.number;//get the REST parameter that was passed
 
 	if(command == 1){
-		res.send("You requested for path 1");
+		res.send("The PLUG is on its path to Destination 1");
 	}
 	else if(command == 2){
-		res.send("You requested for path 2");
+		res.send("YThe PLUG is on its path to Destination 2");
 	}else{
-		res.send("YOU DO NOT KNWO WHAT YOU ARE DOING");
+		res.send("Invalid Parameter Passed. Please read the Instructions for this REST api. ");
 	}
 });
 
