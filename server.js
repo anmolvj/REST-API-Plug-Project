@@ -5,38 +5,25 @@ var jquery 		= require('jquery');
 var app			= express();
 var port 		= 3000;
 
+var index 		= require('./routes/index');
+var mypath 		= require('./routes/path');
+
+
 app.disable('x-powered-by');
 
 //-----------BODY PARSER MIDDLEWARE-----------------
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-//-----Home page for Website---------
-app.get('/',function(req,res,next){
-	res.send("Welcome to Project Plug");
-});
+//----------------VIEW ENGINE-----------------------
+app.set('views',path.join(__dirname,'views'));
+app.set('view engine', 'ejs');
+app.engine('html',require('ejs').renderFile);
 
 
-//-----Main code handling therequests------
-app.get('/:number',function(req,res,next){
-
-	var command = req.params.number;//get the REST parameter that was passed
-
-	if(command == 1){
-		res.send("The PLUG is on its path to Destination 1");
-	}
-	else if(command == 2){
-		res.send("YThe PLUG is on its path to Destination 2");
-	}else{
-		res.send("Invalid Parameter Passed. Please read the Instructions for this REST api. ");
-	}
-});
-
-
-
-
-
-
+//------------------------ ROUTES --------------------
+app.use('/', index);
+app.use('/path', mypath);
 
 
 //------------------------PORT LISTENING CODE--------------------
