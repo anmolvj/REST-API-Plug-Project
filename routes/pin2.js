@@ -11,8 +11,8 @@ router.get('/:uName', (req,res,next) => {
 	
 
 	var outputURL 		= 'https://cloud.arest.io/' + uName + '/mode/' + pin + '/o'
-	var highURL 		= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/o';
-	var lowURL			= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/o';
+	var highURL 		= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/1';
+	var lowURL			= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/0';
 
 	request.get({url:outputURL},function(error,response,body){
 
@@ -50,8 +50,8 @@ router.get('/:time/:uName', (req,res,next) => {
 	
 
 	var outputURL 		= 'https://cloud.arest.io/' + uName + '/mode/' + pin + '/o';
-	var highURL 		= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/o';
-	var lowURL			= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/o';
+	var highURL 		= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/1';
+	var lowURL			= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/0';
 
 		request.get({url:outputURL},function(error,response,body){
 
@@ -61,7 +61,7 @@ router.get('/:time/:uName', (req,res,next) => {
 		           request.get({url:highURL},function(error,response,body){
 					 if (!error && response.statusCode == 200) { 
 					           res.send("The PIN number " + pin + " is now set to HIGH for " + time/1000 + " seconds." );
-					           
+
 					           clearInterval(timeoutID);
 					           timeoutID = setTimeout(function(){
 					           		request.get({url:lowURL},function(error,response,body){

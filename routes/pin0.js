@@ -10,13 +10,11 @@ router.get('/:uName', (req,res,next) => {
 	var uName = req.params.uName;
 	
 
-	// var outputURL 		= 'https://cloud.arest.io/' + uName + '/mode/' + pin + '/o';
-	// var highURL 		= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/o';
-	// var lowURL			= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/o';
+	var outputURL 		= 'https://cloud.arest.io/' + uName + '/mode/' + pin + '/o'
+	var highURL 		= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/1';
+	var lowURL			= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/0';
 
-	var outputURL 		= 'https://cloud.arest.io/posket1/mode/0/o';
-	var highURL 		= 'https://cloud.arest.io/posket1/digital/0/1';
-	var lowURL			= 'https://cloud.arest.io/posket1/digital/0/0';
+
 
 	request.get({url:outputURL},function(error,response,body){
 
@@ -53,8 +51,8 @@ router.get('/:time/:uName', (req,res,next) => {
 	
 
 	var outputURL 		= 'https://cloud.arest.io/' + uName + '/mode/' + pin + '/o';
-	var highURL 		= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/o';
-	var lowURL			= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/o';
+	var highURL 		= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/1';
+	var lowURL			= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/0';
 
 		request.get({url:outputURL},function(error,response,body){
 

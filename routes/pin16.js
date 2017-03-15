@@ -11,8 +11,8 @@ router.get('/:uName', (req,res,next) => {
 	
 
 	var outputURL 		= 'https://cloud.arest.io/' + uName + '/mode/' + pin + '/o'
-	var highURL 		= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/o';
-	var lowURL			= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/o';
+	var highURL 		= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/1';
+	var lowURL			= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/0';
 
 	request.get({url:outputURL},function(error,response,body){
 
@@ -50,9 +50,9 @@ router.get('/:time/:uName', (req,res,next) => {
 	
 
 	var outputURL 		= 'https://cloud.arest.io/' + uName + '/mode/' + pin + '/o';
-	var highURL 		= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/o';
-	var lowURL			= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/o';
-	
+	var highURL 		= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/1';
+	var lowURL			= 'https://cloud.arest.io/' + uName + '/digital/' + pin + '/0';
+
 		request.get({url:outputURL},function(error,response,body){
 
 		 if (!error && response.statusCode == 200) { 
