@@ -27,6 +27,9 @@ app.set('views',path.join(__dirname,'views'));
 app.set('view engine', 'ejs');
 app.engine('html',require('ejs').renderFile);
 
+//------SET STATIC FOLDER------------------
+app.use(express.static(path.join(__dirname, '/public')));
+
 
 //------------------------ ROUTES --------------------
 app.use('/', index);
