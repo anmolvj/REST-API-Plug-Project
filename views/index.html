@@ -4,11 +4,76 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Gidugu" rel="stylesheet">
+
 </head>
 <body>
-	<h1>Congratulations! You are on the right path.</h1>
-	<h2>Method 1 : http://projectplug.club/userID ( Pin switches off after 10 seconds)</h2>
-	<h2>Method 2 : http://projectplug.club/time/userID ( Pin switches off after 'time' seconds)</h2>
+	<!-- <h1>Congratulations! You are on the right path.</h1>
+	<h2>Method 1 : http://projectplug.club/pinNo/userID ( Pin switches off after 10 seconds)</h2>
+	<h2>Method 2 : http://projectplug.club/time/userID ( Pin switches off after 'time' seconds)</h2> -->
+	<header id="header" class="">
+		<h1>Welcome to Project Plug</h1>
+	</header><!-- /header -->
+
+	<section>
+		<input type="text" id="deviceID" placeholder="Enter Device ID">
+		
+		<aside>
+			<h2>INSTRUCTIONS</h2>
+			<p>This tool helps you set any digital pins of Adafruit Feather HUZZAH ESP8266 board to HIGH from anywhere around the globe using aREST Framework. Simply Download <a href="https://github.com/marcoschwartz/aREST/blob/master/examples/ESP8266_cloud/ESP8266_cloud.ino">this</a> file and edit the device_id by giving it a unique name. Hit the upload button and use the panel on the Right to control the Output.</p>
+		</aside>
+
+		<table>
+			<caption>Adafruit Feather HUZZAH ESP8266</caption>
+			<thead>
+				<tr>
+					<th>Pins</th>
+					<th>Time(seconds)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="button" id="4" value="Pin 4"></td>
+					<td><input type="number"  id="4t" placeholder="default: 3"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="5" value="pin5"></td>
+					<td><input type="number"  id="5t" placeholder="default: 3"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="2" value="pin2"></td>
+					<td><input type="number"  id="2t" placeholder="default: 3"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="16" value="pin16"></td>
+					<td><input type="number"  id="16t" placeholder="default: 3"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="0" value="pin0"></td>
+					<td><input type="number"  id="0t" placeholder="default: 3"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="15" value="pin15"></td>
+					<td><input type="number"  id="15t" placeholder="default: 3"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="13" value="pin13"></td>
+					<td><input type="number"  id="13t" placeholder="default: 3"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="12" value="pin12"></td>
+					<td><input type="number"  id="12t" placeholder="default: 3"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="14" value="pin14"></td>
+					<td><input type="number"  id="14t" placeholder="default: 3"></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<script src="./js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="./js/main.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
