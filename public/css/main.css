@@ -1,0 +1,83 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #0F8B8D;
+	font-family: 'Gidugu', sans-serif;
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+
+}
+
+header{
+	background-color: #4F5D75;
+	color: #3399ff;
+	font-size: 25px;
+	border-radius: 10px;
+	-moz-box-shadow: 0vw 0vw  3vw black;
+	-webkit-box-shadow: 0vw 0vw  3vw black;
+	box-shadow: 0vw 0vw  50px black;
+	margin-bottom: 30px;
+	
+}
+
+section{
+	font-size: 25px;
+}
+
+table{
+	margin: auto;
+	width: 40%;
+	border-radius: 10px;
+	-moz-box-shadow: 0vw 0vw  3vw #4F5D75;
+	-webkit-box-shadow: 0vw 0vw  3vw #4F5D75;
+	box-shadow: 0vw 0vw  50px #4F5D75;
+	
+}
+
+[type=button]{
+	width: 70%;
+	height: 40px;
+	background-color: lightgrey;
+
+
+}
+
+[type=button]:focus{
+	outline: 0;
+}
+
+
+input{
+	text-align: center;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+td{
+	width: 30%;
+}
+
+caption{
+	font-size: 30px;
+}
+aside{
+	width: 30%;
+	float: left;
+	border: 1px dashed lightgrey;
+	margin-top: 20px;
+	
+
+}
+aside h2{
+	color: yellow;;
+}
+
+a{
+	text-decoration: none;
+	color: yellow;
+}
