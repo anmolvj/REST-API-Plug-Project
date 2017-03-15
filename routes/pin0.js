@@ -21,7 +21,7 @@ router.get('/:uName', (req,res,next) => {
 		 			//SET PIN HIGH
 		           request.get({url:highURL},function(error,response,body){
 					 if (!error && response.statusCode == 200) { 
-					           res.send("The PIN number " + pin + " is now set to HIGH");
+					           res.send("The PIN number " + pin + " is now set to HIGH for " + time/1000 + " seconds." );
 
 					           clearInterval(timeoutID);
 					           timeoutID = setTimeout(function(){
@@ -59,7 +59,7 @@ router.get('/:time/:uName', (req,res,next) => {
 		 			//SET PIN HIGH
 		           request.get({url:highURL},function(error,response,body){
 					 if (!error && response.statusCode == 200) { 
-					           res.send("The PIN number " + pin + " is now set to HIGH");
+					           res.send("The PIN number " + pin + " is now set to HIGH for " + time/1000 + " seconds." );
 
 					           clearInterval(timeoutID);
 					           timeoutID = setTimeout(function(){
